@@ -1,0 +1,183 @@
+1. Install Git
+
+Download and install Git:
+
+Git Download
+
+Verify installation:
+
+git --version
+
+Example output:
+
+git version 2.54.0.windows.1
+2. Open Your Project Folder
+
+Example:
+
+D:\CLOUD
+│
+└── static.html
+
+Open Command Prompt or VS Code Terminal in that folder:
+
+cd D:\CLOUD
+
+Check files:
+
+dir
+3. Configure Git (One Time Only)
+
+Set your GitHub username:
+
+git config --global user.name "kartik7483"
+
+Set your GitHub email:
+
+git config --global user.email "kartik7483s@gmail.com"
+
+Verify:
+
+git config --global --list
+
+Output:
+
+user.name=kartik7483
+user.email=kartik7483s@gmail.com
+4. Initialize Git Repository
+git init
+
+Output:
+
+Initialized empty Git repository
+5. Add Files to Git
+
+Add all files:
+
+git add .
+
+Check status:
+
+git status
+6. Commit Files
+git commit -m "First commit"
+
+Example output:
+
+[master (root-commit)] First commit
+7. Create Repository on GitHub
+Login to GitHub.
+Click + → New Repository.
+Repository name:
+cloud-project
+Keep repository empty.
+Click Create Repository.
+8. Connect Local Project to GitHub
+
+Copy repository URL:
+
+https://github.com/kartik7483/cloud-project.git
+
+Run:
+
+git remote add origin https://github.com/kartik7483/cloud-project.git
+
+Verify:
+
+git remote -v
+9. Rename Branch to Main
+git branch -M main
+10. Upload Project to GitHub
+git push -u origin main
+
+Browser may open asking for GitHub authentication.
+
+After successful push:
+
+branch 'main' set up to track 'origin/main'
+11. Verify on GitHub
+
+Refresh your repository page.
+
+You should see:
+
+static.html
+
+uploaded.
+
+12. Updating Code Later
+
+Whenever you change your file:
+
+Check status
+git status
+Add changes
+git add .
+Commit changes
+git commit -m "Updated webpage"
+Push to GitHub
+git push
+Most Important Commands for Interviews
+git init
+git add .
+git commit -m "message"
+git status
+git log
+git push
+git pull
+git branch
+git checkout
+git merge
+git clone <repository-url>
+Meaning
+Command	Purpose
+git init	Create Git repository
+git add .	Stage all files
+git commit -m "msg"	Save changes locally
+git push	Upload to GitHub
+git pull	Download latest changes
+git clone URL	Copy repository
+git branch	View branches
+git merge	Merge branches
+git status	Check file status
+git log	View commit history
+
+This is the complete beginner-to-GitHub workflow you just performed successfully. 
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+When do you start from the beginning?
+
+Only when you create a new project folder that has never been connected to GitHub before.
+
+Example:
+
+D:\JavaProject
+
+For a brand-new project, you would do:
+
+git init
+git add .
+git commit -m "First commit"
+git branch -M main
+git remote add origin REPOSITORY_URL
+git push -u origin main
+For your current D:\CLOUD project				#cloud folder example
+
+Every future update is just:
+
+git add .
+git commit -m "your message"
+git push
+
+No need to run git init or git remote add origin again.
+
+To confirm it's connected, run:
+
+git remote -v
+
+and
+
+git status
+
+They should show that the repository is linked to GitHub.
